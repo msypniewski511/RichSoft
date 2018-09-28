@@ -1,0 +1,188 @@
+extends layout
+
+block content
+  //- PAGE HEADER
+  header#page-header
+    .container
+      .row.header-overflow
+        .col-md-6.m-auto.text-center
+          h1.mt-5 About Us
+          p London web development and design agency
+  //- ABOUT SECTION
+  section#about.py-3
+    .container
+      .row
+        .col-md-8.align-self-center
+          h1 WHAT WE DO
+          p
+            | Richsoft is web design agency delivering expert and cost effective solutions.
+            | For over 5 years, our web development experts have created engaging websites - designed with both users and search engines in mind. Futhermore our digital marketing and SEO services attract the right users to showcase your unique brand to.
+        .col-md-4
+          img.img-fluid.rounded-circle.d-none.d-md-block.about-img(src='img/key.jpeg', alt='')
+  
+  //- SECTION Colection
+  section#our-company
+    .container
+      .row.px-0
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#first
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading
+              h3 OUR SERVICE OFFERINGS INCLUDE.
+            .about-body
+              p Our service offerings include website design, usability, web development, e-Marketing, application development, e-Commerce, search engine optimisation 
+                | (SEO), hosting and a range of other interactive products.
+      .row.px-0
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading.after-left
+              h3 WEBSITE DESIGN.
+            p We recognise that your company's identity and reputation rests not only on the quality of the services that you provide, but on how 
+              | people - consumers - perceive you. The impression is immediate.
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#second
+      //- Drugi
+      .row.px-0
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#third
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading.after-right
+              h3 RICHSOFT ALSO OFFERS A WIDE RANGE OF DIGITAL SOLUTION SERVICES.
+            .about-body
+              p Since our inception in 2014 we’ve grown our service offerings year on year, fulfilling the needs of our clients and maintaining our competitive edge.
+      .row.px-0
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading.after-left
+              h3 PROGRAMMING LANGUAGES / TOOLS.
+            p Ruby, PHP, HTML5, CSS3, JavaScript, Node.js, SQL, NoSQL
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#fourth
+      //- Trzeci
+      .row.px-0
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#fivth
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading.after-right
+              h3 DATABASE PLATFORMS.
+            .about-body
+              p MySQL, PostgreSQL, MongoDB and more...
+      .row.px-0
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading.after-left
+              h3 INTERNET / INTRANET DEVELOPMENT
+            p HTML5, CSS3, JavaScript, Node.js, Express, Apache, E-mail layouts
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#sixth
+        //- Czwarty
+      .row.px-0
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#seventh
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading.after-right
+              h3 DESIGN SOFTWARE.
+            .about-body
+              p Adobe Creative Suite (Photoshop, InDesign, Fireworks, Illustrator).
+      .row.px-0
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading.after-left
+              h3 DIGITAL MARKETING.
+            p Social Media Management, Email marketing, Search Engine Optimisation (SEO), Content Marketing and Linkbuilding, Google AdWords, Google Analytics.
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#picture-8
+        //- Piaty
+      .row.px-0
+        .col-md-6.p-0
+          .img-about.d-none.d-sm-block#picture-9
+        .col-md-6.align-self-center
+          .half-width
+            .about-heading.after-right
+              h3 WEB APPLICATION FRAMEWORKS.
+            .about-body
+              p Ruby on Rails, MEAN / MERN Stack, React Native.
+    
+  
+  //- ICON BOXES
+  section#boxes.p-5
+    .container
+      .row.mb-4
+        .card-deck
+            .card.bg-primary.text-white.text-center
+              .card-header
+                i.fa.fa-pen-fancy.fa-5x
+              .card-body.align-items-center.d-flex.justify-content-center
+                .pom
+                  h5.card-title WEB DESIGN
+                  p.card-text We design and build websites that you'll be proud to show your customers.
+            .card.bg-dark.text-white.text-center
+              .card-header
+                i.fas.fa-laptop.fa-5x
+              .card-body
+                h5.card-title WEB DEVELOPMENT
+                p.card-text We create beautiful, fast and secure web applications tailored exclusively for your business goals. 
+                  | We cover the backend and frontend of your application using the most innovative tech stacks.
+            .card.bg-primary.text-white.text-center
+              .card-header
+                i.fas.fa-shopping-cart.fa-5x
+              .card-body
+                h5.card-title ECOMMERCE & M-COMMERCE
+                p.card-text We design and develop powerful eCommerce solutions that are scalable and flexible, yet simple enough to manage on your own.
+      //- // Second row of boxes
+      .row.mb-4
+        .card-deck
+            .card.bg-dark.text-white.text-center.align-content-middle
+              .card-header
+                i.fas.fa-comments.fa-5x
+              .card-body.align-items-center.d-flex.justify-content-center
+                .pom
+                  h5.card-title SOCIAL MARKETING AND SEO
+                  p We give you ways social media can improve your SEO.
+            .card.bg-primary.text-white.text-center
+              .card-header
+                i.fas.fa-globe-africa.fa-5x
+              .card-body
+                h5.card-title MULTILINGUAL
+                p.card-text Let’s face it, even though English is a popular international language, there are over 6,900 other languages around the world.
+            .card.bg-dark.text-white.text-center
+              .card-header
+                i.fas.fa-mobile-alt.fa-5x
+              .card-body
+                h5.card-title MOBILE DEVELOPMENT
+                p.card-text The mobile apps revolution is here and here to stay but are you ready? We provide mobile app development solutions for your business. 
+                  | We deliver multi platform mobile app solutions
+  //- // END OF BOXES
+  //- // TESTIMONIALS
+  section#testimonials.p-4.bg-dark.text-white
+    .container
+      h2.text-center Ours Stacks
+      .row.text-center
+        .col
+          .slider
+            div
+              blockquote.blockquote
+                i.far.fa-gem.fa-2x.text-muted
+                h5 Ruby on Rails development
+                p.mb-0
+                  | Ruby on Rails is a framework that revolutionised they way developers approach web apps today.
+                footer
+                  
+            div
+              blockquote.blockquote
+                i.fab.fa-node-js.fa-2x.text-muted
+                h5 Node.js development
+                p.mb-0
+                  | Node.js enables you to build performant web applications based on Javascript – one language for full-stack development.
+            div
+              blockquote.blockquote
+                i.fab.fa-android.fa-2x.text-muted
+                h5 Android development
+                p.mb-0
+                  | Android developers at Richsoft develop top quality mobile apps and help clients make the best decisions.
+
+

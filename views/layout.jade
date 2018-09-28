@@ -1,0 +1,104 @@
+doctype html
+html
+head
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible', content='ie=edge')
+  link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.3.1/css/all.css', integrity='sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU', crossorigin='anonymous')
+  link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css')
+  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css')
+
+  link(rel='stylesheet', href='css/style.css')
+  title
+    | RichSoft Computer Repairs 
+    | #{title}
+
+body
+
+  nav.navbar.navbar-expand-sm.fixed-top.navbar-dark.bg-dark
+    .container
+      a.navbar-brand(href='index.html') 
+        span.text-primary Rich
+        |Soft
+      button.navbar-toggler(data-toggle='collapse', data-target='#navbarCollapse')
+        span.navbar-toggler-icon
+      #navbarCollapse.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item(class=(active==='index'?'active':''))
+            a.nav-link(href='/') Home
+          li.nav-item(class=(active==='about'?'active':''))
+            a.nav-link(href='/about') About Us
+          li.nav-item(class=(active==='services'?'active':''))
+            a.nav-link(href='/services') Services
+          li.nav-item(class=(active==='contact'?'active':''))
+            a.nav-link(href='/contact') Contact
+  // End of navbar
+  block content
+  // FOOTER
+  footer#main-footer.text-center.p-4
+    .container
+      .row
+        .col
+          p
+            | Copyrigth © 
+            span#year
+            |  MSypniewski511, RichSoft Inc.
+
+  script(src='http://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js')
+  script.
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+    // Configure slider
+    $('.carousel').carousel({
+    interval: 5000,
+    pause: 'hover'
+    });
+    // Ligthbox Init
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+    });
+    // Video Play
+    $(".video").click(function () {
+    let theModal = $(this).data('target'),
+    videoSRC = $(this).attr('data-video'),
+    videoSRCauto = videoSRC + "?modestbranding=1&rel=0&contols=0&showinfo=0&html5=1&autoplay=1";
+    $(theModal + ' iframe').attr('src', videoSRCauto);
+    $(theModal + ' button.close').click(function () {
+    $(theModal + ' iframe').attr('src', videoSRC)
+    })
+    });
+    // Testimonials
+    $('.slider').slick({
+      infinte: true,
+      slideToShow: 1,
+      slideToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+    });
+    //- Smooth scrolling
+    $('#services a').click(function() {
+      let sectionTo = $(this).attr('href')
+      $('html, body').animate({
+        scrollTop: $(sectionTo).offset().top
+      }, 500)
+    });
+    $('.slide-web-development').slick({
+      autoplay: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: false
+    });
+    $('.center').slick({
+      autoplay: true,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: false
+    });

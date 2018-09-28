@@ -1,0 +1,322 @@
+extend layout
+
+block content
+  //- // PAGE HEADER
+  header#page-header.mb-5
+    .container
+      .row.header-overflow
+        .col-md-6.m-auto.text-center
+          h1.mt-5 Fast and Reliable Software Solutions for your Business
+
+  //- // SERVICES SECTION
+  section#services
+    .container
+      .row.text-center
+        .col-md-4.mb-4
+          a(href="#web-development")
+            .card
+              .card-body.text-primary
+                  i.fas.fa-desktop.fa-5x.mb-2
+                  br
+                  p.mt-3 Web Development  
+              
+        .col-md-4.mb-4
+          a(href="#mobile-development")  
+            .card
+              .card-body.text-primary
+                i.fas.fa-mobile-alt.fa-5x.mb-2
+                br
+                p.mt-3 Mobile Development
+        .col-md-4.mb-4
+          a(href="#produc-design")
+            .card
+              .card-body.text-primary
+                i.fas.fa-pencil-ruler.fa-5x.mb-2
+                br
+                p.mt-3 Product Design
+
+  //- SECTION WEB DEVELOPMENT
+  section#web-development.p-3.bg-dark.text-white
+    .container
+      h1.mt-5.text-center
+        | Web Development
+      hr.pb-3
+      p.m-3 Web Development at RichSoft is based on the cutting-edge technology and reliable solutions tested in battle.
+      .row.my-3
+        .col.md-6
+          .card.card-black
+            .card-header
+              h6.mb-0 We cover the backend and frontend of your application using the most innovative tech stacks. We always choose the best 
+                | frameworks possible to meet your business goals and satisfy your users’ expectations. We Work In Agile
+            .card-body
+              .row.my-3
+                .col-4
+                  .card.shadow-blue.bg-dark.text-white
+                    .list-group.bg-dark#list-tab(role="tablst")
+                      a.list-group-item.list-group-item-dark.list-group-item-action.moja.active#list-stack-list(data-toggle="list" href="#list-stack" role="tab" aria-controls="stack")
+                        | Our Stack
+                      a.list-group-item.list-group-item-dark.list-group-item-action.moja#list-frontend-list(data-toggle="list" href="#list-frontend" role="tab" aria-controls="frontend")
+                        | Front End
+                      a.list-group-item.list-group-item-dark.list-group-item-action.moja#list-backend-list(data-toggle="list" href="#list-backend" role="tab" aria-controls="backend")
+                        | Back End
+                      a.list-group-item.list-group-item-dark.list-group-item-action.moja#list-database-list(data-toggle="list" href="#list-database" role="tab" aria-controls="database")
+                        | Database
+                .col-8
+                  .tab-content#nav-tabContent
+                    //- Pierwszy panel
+                    .tab-pane.fade.show.active.shadow-blue#list-stack(role="tabpanel" aria-labelledby="list-stack-list")
+                      .card.shadow-blue.bg-dark.text-white
+                        .list-group
+                          .list-group-item.list-group-item-dark.moja Ruby on Rails web development
+                          .list-group-item.list-group-item-dark.moja Sinatra web development
+                          .list-group-item.list-group-item-dark.moja MERN Stack
+                          .list-group-item.list-group-item-dark.moja Node.js
+                    //-  Drugi panel
+                    .tab-pane.fade.show.shadow-blue#list-frontend(role="tabpanel" aria-labelledby="list-frontend-list")
+                      .list-group
+                        .list-group-item.list-group-item-dark.moja HTML5/CSS3 we use HAML and SASS
+                        .list-group-item.moja JavaScript es5 and es6
+                        .list-group-item.moja React, Vue, JQuery, Materialize, Ember
+                        .list-group-item.moja Bootstrap 3/4, Foundation
+                    //- Trzeci panel
+                    .tab-pane.fade.show.shadow-blue#list-backend(role="tabpanel" aria-labelledby="list-backend-list")
+                      .list-group
+                        .list-group-item.moja Ruby, Sinatra
+                        .list-group-item.moja Ruby on Rails
+                        .list-group-item.moja Node.js
+                        .list-group-item.moja Node.js + Express
+                    //- Czwarty panel
+                    .tab-pane.fade.show#list-database(role="tabpanel" aria-labelledby="list-database-list")
+                      .row
+                        .col-6
+                          .list-group.shadow-blue
+                            .list-group-item.moja Databases
+                            .list-group-item.moja PostgreSQL
+                            .list-group-item.moja MySQL
+                            .list-group-item.moja SQLite
+                        .col-6
+                          .list-group.shadow-blue
+                            .list-group-item.moja NoSQL Databases
+                            .list-group-item.moja MongoDB
+                            .list-group-item.moja Redis
+  section#slider-web-developer.py-5
+    .container
+      h2.text-center Ours Stacks
+      hr.my-3.text-primary
+      .row.text-center
+        .col
+          .slide-web-development
+            div
+              i.far.fa-gem.fa-4x.text-danger
+              p Ruby
+            div
+              img(src="img/ruby_on_rails.png" style="width:64px;height:72px;margin:auto;")
+              p Ruby on Rails
+            div
+              img(src="img/sinatra.png" style="width:64px;margin:auto;")
+              p.mt-3 Sinatra
+            div
+              img(src="img/nodejs.jpg" style="max-height:72px;margin:auto;")
+              p Node.js
+            div
+              img(src="img/express.jpg" style="width:64px;margin:auto;")
+              p Express
+            div
+              i.fab.fa-js-square.fa-4x.text-warning
+              p JavaScript
+            div
+              i.fab.fa-react.fa-4x.text-info
+              p.mt-3 React
+            div
+              img(src="img/postgresql.png" style="width:64px;margin:auto;")
+              p PostgreSQL
+            div
+              img(src="img/mongo.jpg" style="width:64px;margin:auto;")
+              p MongoDB
+
+  //- SECTION MOBILE DEVELOPMENT
+  section#mobile-development.p-3.bg-dark.text-white
+    .container
+      h1.mt-5.text-center
+        | Mobile Development
+      hr.pb-3
+      p.m-3 Mobile application development is the set of processes and procedures involved in writing software for small, wireless computing devices such as smartphones or tablets.
+       | RichSoft company provides products made in accordance with all thts rules.
+      .row.my-3
+        .col-md-6
+          .card.card-black.text-white
+            .card-header
+              h5 Progressive Enhancement.
+            .card-body
+              p The mobile-first approach is exactly what we do. Designing for the smallest screen and working your way up. It is one of the best strategies to create either a 
+                | responsive or adaptive design.
+              p The mobile-first approach is a tenet of progressive enhancement. It is the ideology that mobile design, as the hardest, should be done first. Once the mobile 
+                | design questions are answered, designing for other devices will be easier. What it boils down to is that, the smallest of the designs will have only the essential 
+                | features, so right away you have designed the heart of your UX.
+        .col-md-6
+          .card.card-black.text-white
+            .card-header
+              h5 React Native.
+            .card-body
+              p React Native is a powerful framework for cross-platform development. One technology, one codebase, multiple devices, faster development.
+              p React Native is a framework that allows developers to build mobile apps using JavaScript. It uses the same design as React and facilitates composing rich mobile 
+                | UIs from declarative components. Developers can now reuse code across the web and mobile, and different operating systems. Thanks to React Native, you can 
+                | deliver high-quality applications for Android and iOS using a fraction of the resources it would take if you went for the native approach.
+
+  section#slider-mobile-developer.py-5
+    .container
+      .row.text-center
+        .col
+          .center
+            div
+              img.slide-2(src="img/mobile-5.jpeg")
+            div
+              img.slide-2(src="img/mobile-1.jpg")
+            div
+              img.slide-2(src="img/mobile-2.jpg")
+            div
+              img.slide-2(src="img/mobile-3.jpg")
+            div
+              img.slide-2(src="img/ipad-tablet-technology-touch.jpg")     
+
+  //- SECTION PRODUCT DESIGN
+  section#produc-design.p-5.bg-dark.text-white
+    .container
+      h1.text-center
+        | Product Design
+      hr.pb-3
+      p It’s surprisingly rare to come across a website that is beautifully designed and also technically sound. Our goal is to create and develop websites that excel on both fronts.
+      .row.my-3
+        .col.md-6
+          .card.card-black
+            .card-header
+              h6.mb-0 Good design and development work side-by-side. Beautiful websites also need to perform optimally – for both users and search engines.
+            .card-body
+              .row.my-3
+                .col-4
+                  .card.shadow-blue.bg-dark.text-white
+                    .list-group.bg-dark#list-tab(role="tablst")
+                      a.list-group-item.list-group-item-dark.list-group-item-action.moja.active#list-home-list(data-toggle="list" href="#list-home" role="tab" aria-controls="home")
+                        | What is a product?
+                      a.list-group-item.list-group-item-dark.list-group-item-action.moja#list-design-thinking-list(data-toggle="list" href="#list-design-thinking" role="tab" aria-controls="design-thinking")
+                        | Design Thinking.
+                      a.list-group-item.list-group-item-dark.list-group-item-action.moja#list-technics-list(data-toggle="list" href="#list-technics" role="tab" aria-controls="technics")
+                        | Product Design Technics
+                .col-8
+                  .tab-content#nav-tabContent
+                    //- Pierwszy panel
+                    .tab-pane.fade.show.active.shadow-blue#list-home(role="tabpanel" aria-labelledby="list-home-list")
+                      .card.shadow-blue.bg-dark.p-3
+                        p What is a product? Until recently, the term was used only in relation to something material and often found in a retail store. Nowadays, it is 
+                          | coming to mean digital products as well. Apps and websites are modern products.
+                        p When it comes to building great products, design is the most important “feature.” We’ve moved into the stage where product design 
+                          | dominates — it’s what sets companies apart and gives a real edge over competitors.
+                    //-  Drugi panel
+                    .tab-pane.fade.show.shadow-blue#list-design-thinking(role="tabpanel" aria-labelledby="list-design-thinking-list")
+                      .card.shadow-blue.bg-dark.p-3
+                        card-body
+                          card-title DESIGN THINKING AS THE FOUNDATION FOR THE DESIGN PROCESS
+                          p RichSoft designers have always applied design thinking to product design (whether physical or digital) because it’s focused on end-to-end product 
+                            | development, and not just the “design phase” part.
+                          blockquote 
+                            small
+                              em -Design thinking is a human-centered approach to innovation that draws from the designer’s toolkit to integrate the needs of people, 
+                                | the possibilities of technology and the requirements for business success. 
+                              | (Tim Brown)
+                    //- Trzeci panel
+                    .tab-pane.fade.show.shadow-blue#list-technics(role="tabpanel" aria-labelledby="list-technics-list")
+                      .card.shadow-blue.bg-dark.text-white
+                      .list-group
+                        .list-group-item.moja UX Review - Report analysis of the product's market fit, usability, and user experience.
+                        .list-group-item.moja Product Design - Ideation and product creation at every stage of the product's lifecycle.
+                        .list-group-item.moja UX Services - Solving real human problems and providing the ultimate UX for your web and mobile application.
+  section#slider-mobile-developer.py-5
+    .container
+      .row.text-center
+        .col
+          .center
+            div
+              img.slide-2(src="https://source.unsplash.com/lbLgFFlADrY/640x420")
+              h5.mt-3 Full-stack design partners
+            div
+              img.slide-2(src="img/problem-solving.jpeg")
+              h5.mt-3 Problem solving
+            div
+              img.slide-2(src="https://source.unsplash.com/kiCAigL92eI/640x420")
+              h5.mt-3 Feedback culture
+  //- // FAQ
+  section#faq.p-5.bg-dark.text-white
+    .container
+      h1.text-center
+        | Frequently Asked Questions
+      hr
+      .row
+        .col-md-6
+          #accordion
+            //- // START COLLAPSE
+            .card.m-3
+              .card-header
+                h5.mb-0
+                  a(href='#collapseOne', data-toggle='collapse', data-parent='#accordion')
+                    | Fully Designed & Built
+              #collapseOne.collapse
+                .card-body First we create the perfect design, then we bring it to life.
+            //- // Card
+            //- // START COLLAPSE
+            .card.m-3
+              .card-header
+                h5.mb-0
+                  a(href='#collapse3', data-toggle='collapse', data-parent='#accordion')
+                    | Live Chat ?
+              #collapse3.collapse
+                .card-body
+                  p Yes, we can do it for you.
+                  p Customer support has never been easier and quicker.
+            //- // Card
+            //- // START COLLAPSE
+            .card.m-3
+              .card-header
+                h5.mb-0
+                  a(href='#collapse2', data-toggle='collapse', data-parent='#accordion')
+                    | Hosted & Supported
+              #collapse2.collapse
+                .card-body
+                  p We offer full hosting and support, to keep your website hassle free.
+            //- // Card
+            //- // END FIRST COLL
+        .col-md-6
+          #accordion
+            //- // START COLLAPSE
+            .card.m-3
+              .card-header
+                h5.mb-0
+                  a(href='#collapse4', data-toggle='collapse', data-parent='#accordion')
+                    | Mobile Responsive
+              #collapse4.collapse
+                .card-body
+                  p Every site we create is mobile responsive.
+                  p The mobile-first approach is exactly what we do. Designing for the smallest screen and working your way up. It is one of the best strategies to create either a responsive or adaptive design.
+            //- // Card
+            //- // START COLLAPSE
+            .card.m-3
+              .card-header
+                h5.mb-0
+                  a(href='#collapse5', data-toggle='collapse', data-parent='#accordion')
+                    | Simple Management
+              #collapse5.collapse
+                .card-body
+                  p Work with us, it’s easy for you to make updates to your website. (Other options also available.)
+                  | At Webheads we design and build websites that you'll be proud to show your customers. We know from our extensive website design experience that sometimes the ‘look' is everything for the client and sometimes robust, trustworthy web processes are the key. And sometimes it's both.
+
+
+            //- // Card
+            //- // START COLLAPSE
+            .card.m-3
+              .card-header
+                h5.mb-0
+                  a(href='#collapse6', data-toggle='collapse', data-parent='#accordion')
+                    | Maps
+              #collapse6.collapse
+                .card-body
+                  p Help people find you with integrated maps.
+                //- // Card

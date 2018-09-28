@@ -1,0 +1,73 @@
+extends layout
+
+block content
+  //- PAGE HEADER
+  header#page-header
+    .container
+      .row.header-overflow
+        .col-md-6.m-auto.text-center
+          h1.mt-5 Contact Us
+          p Got a qusetion? We'd love to hear from you. Send a message and we'll repond as soon as possible.
+  //- CONTACT SECTION
+  section#contact.py-3
+    .container
+      .row
+        .col-md-4
+          .card.p-4
+            .card-body
+              h4 Get In TOUCH
+              h4 Address
+              p 7 Bathen House, 64 third Avenue
+              | W10 4SJ, London UK
+              h4 Email
+              p msypniewski511@gmail.com
+              h4 Phone
+              p (0044) 079 220 618 503
+        .col-md-8
+          .card.p-4
+            .card-body
+              h3.text-center Please fill this form to contact us
+              hr
+              form(method="post", action="contact/send")
+                .row
+                  .col-md-6
+                    .form-group
+                      input.form-control(name='first_name', placeholder='First Name', type='text')
+                  .col-md-6
+                    .form-group
+                      input.form-control(name='last_name', placeholder='Last Name', type='text')
+                  .col-md-6
+                    .form-group
+                      input.form-control(name='email', placeholder='Email', type='email')
+                  .col-md-6
+                    .form-group
+                      input.form-control(name='pfone_number', placeholder='Phone number', type='text')
+                .row
+                  .col-md-12
+                    .form-group
+                      textarea.form-control(name='message')
+                  .col-md-12
+                    .form-group
+                      button.btn.btn-outline-danger.btn-block(type='submit', value='Submit') Submit
+  //- STAFF SECTION
+  section#staff.py-5.text-center.text-white.bg-dark
+    .container
+      h1 Our Staff
+      hr
+      .row
+        .col-md-3
+          img.img-fluid.rounded-circle.mb-2(src='img/Maciej1.jpg', alt='')
+          h4 Maciej Sypniewski
+          small Full Stack Web Developer
+        .col-md-3
+          img.img-fluid.rounded-circle.mb-2(src='img/person2.jpg', alt='')
+          h4 Sara Williams
+          small Businees Manager
+        .col-md-3
+          img.img-fluid.rounded-circle.mb-2(src='img/person1.jpg', alt='')
+          h4 John Doe
+          small CEO
+        .col-md-3
+          img.img-fluid.rounded-circle.mb-2(src='img/person4.jpg', alt='')
+          h4 Still Smith
+          small Web Developer

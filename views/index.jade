@@ -1,0 +1,183 @@
+extends layout
+
+block content
+  // SHOWCASE SLIDER
+  section#showcase
+    #myCarousel.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+      .carousel-inner
+        //- First Slide
+        .carousel-item.carousel-image-1.active
+          .container
+            video(autoplay muted loop preload="auto" poster="img/server.jpeg" id="myVideo")
+                source(src="img/rain.mp4" type="video/mp4")
+          .my-overflow
+            .carousel-caption.d-sm-block.mb-5.text-right
+              h4.text-light RichSoft will build applications suitable for each of your ideas
+              h1.display-3 Unlock Your Digital Business 
+              h1.display-3 Potential
+              p.lead.mb-5
+                | Share your challenge with our team and we’ll work with you to deliver a revolutionary digital product.
+              a.btn.btn-primary.btn-lg.mb-5(href='contact') Estimate Project
+        //- Second Slide
+        .carousel-item.carousel-image-2
+          .container
+            video(autoplay muted loop preload="auto" poster="img/server.jpeg" id="myVideo")
+                source(src="img/coding.mp4" type="video/mp4")
+          .my-overflow
+            .carousel-caption.d-sm-block.mb-5
+              h4.text-light Web App? Mobile App? E-commerce?
+              h1.display-3 Develop Outstanding Products.
+              h1.display-3 Fast.
+              p.lead RichSoft creates products that let people do things differently. What's your idea?
+              a.btn.btn-primary.btn-lg.mb-5(href='#') Estimate Project
+        //- Third Slide
+        .carousel-item.carousel-image-3
+          .container
+            video(autoplay muted loop preload="auto" poster="img/server.jpeg" id="myVideo1")
+                source(src="img/world.mp4" type="video/mp4")
+          .my-overflow-1
+            .carousel-caption.d-sm-block.mb-5
+              h4.text-light.text-left Software for World
+              h1.display-3.mb-5.text-left Deploing Application To Production Environment.
+              p.lead.text-left
+                | We can help you harness the true power of your data regardless of how it’s stored, and no matter its format.
+              .text-left
+                a.btn.btn-primary.btn-lg.mb-5(href='#') Estimate Project
+      
+      // Arrorws
+      a.carousel-control-prev(href='#myCarousel', data-slide='prev')
+        span.carousel-control-prev-icon.text-primary
+      a.carousel-control-next(href='#myCarousel', data-slide='next')
+        span.carousel-control-next-icon
+  // END SLIDE
+
+  // ICON AREA
+  section#home-icons.py-5
+    .container
+      .row
+        .col-md-4.mb-4.text-center.card-deck
+          .card.blue
+            .card-header.text-primary
+              i.fas.fa-desktop.fa-3x.mb-2
+              br
+              p Web Development
+            .card-body
+              ul.list-group.list-group-flush
+                li.list-group-item Ruby on Rails
+                li.list-group-item Node.js
+                li.list-group-item React.js
+                li.list-group-item PHP
+                li.list-group-item Progressive Web App
+        .col-md-4.mb-4.text-center.card-deck
+          .card.black
+            .card-header
+              i.fas.fa-mobile-alt.fa-3x.mb-2
+              br
+              p Mobile Development
+            .card-body
+              ul.list-group.list-group-flush
+                li.list-group-item Android
+                li.list-group-item iOS
+                li.list-group-item React Native
+        .col-md-4.mb-4.text-center.card-deck
+          .card.blue
+            .card-header.text-primary
+              i.fas.fa-pen-fancy.fa-3x.mb-2
+              br
+              p Product Design
+            .card-body
+              ul.list-group.list-group-flush
+                li.list-group-item Product Design Sprint
+                li.list-group-item UX Review
+                li.list-group-item Adobe Premiere
+                li.list-group-item Adobe Ilustrator
+                li.list-group-item Video
+          //- i.fas.fa-desktop.fa-3x.mb-2
+          //- h3 Web Development
+          //- p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, consequatur.
+        //- .col-md-4.mb-4.text-center
+        //-   i.fas.fa-cloud.fa-3x.mb-2
+        //-   h3 Sendin Data
+        //-   p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, consequatur.
+        //- .col-md-4.mb-4.text-center
+        //-   i.fas.fa-cart-plus.fa-3x.mb-2
+        //-   h3 Making Money
+        //-   p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, consequatur.
+  //- Home heading section
+  section#home-heading.p-5
+    .dark-overlay
+      .row
+        .col
+          .container.py-5
+            h1.pt-5 WE ARE A LONDON BASED SOFTWARE DEVELOPMENT COMPANY
+            p.d-none.d-md-block.pb-5 4 YEARS OF EXPERIENCE  |   2 OFFICES IN EU  |  20+ DELIVERED PROJECTS
+  //- INFO SECTION
+  section#info.py-5
+    .container
+      .row
+        .col-md-6.align-self-center
+          h3 We Work In Agile
+          ul.list-group.py-3
+            li.list-group-item The agile project promotes collaborative working, especially with the customer.
+            li.list-group-item The agile project reflects, learns and adjusts at regular intervals to ensure that the customer is always satisfied and is provided with outcomes that result in benefits.
+          a.btn.btn-outline-danger.btn-lg(href='https://www.apm.org.uk/resources/find-a-resource/agile-project-management/') Learn More...
+        .col-md-6
+          img.img-fluid(src='img/laptop.png', alt='')
+  //- VIDEO PLAY
+  section#video-play
+    .dark-overlay
+      .row
+        .col
+          .container.py-5.mt-5
+            a.video(href='#', data-video='https://www.youtube.com/embed/YyrxRZsmlPE', data-toggle='modal', data-target='#videoModal')
+              i.fas.fa-play.fa-3x.mb-3
+            h1 See What We Do
+  //- PHOTO GALERY
+  section#gallery.py-5
+    .container
+      h1.text-center Photo Gallery
+      p.text-center Check out our photos
+      .row.mb-4
+        .col-md-4
+          a(href='img/1-main.png', data-toggle='lightbox', data-gallery='img-gallery', data-height='560', data-width='560')
+            img.img-moje(src='img/1.png', alt='')
+        .col-md-4
+          a(href='img/2-main.png', data-toggle='lightbox', data-gallery='img-gallery', data-height='1000', data-width='1000')
+            img.img-moje(src='img/2.png', alt='')
+        .col-md-4
+          a(href='img/3-main.png', data-toggle='lightbox', data-gallery='img-gallery', data-height='1000', data-width='1000')
+            img.img-moje(src='img/3.png', alt='')
+      .row.mb-4
+        .col-md-4
+          a(href='img/4.png', data-toggle='lightbox', data-gallery='img-gallery', data-height='560', data-width='560')
+            img.img-moje(src='img/4.png', alt='')
+        .col-md-4
+          a(href='img/5.png', data-toggle='lightbox', data-gallery='img-gallery', data-height='1000', data-width='1000')
+            img.img-moje(src='img/5.png', alt='')
+        .col-md-4
+          a(href='img/6.png', data-toggle='lightbox', data-gallery='img-gallery', data-height='1000', data-width='1000')
+            img.img-moje(src='img/6.png', alt='')
+  // NEWSLETTER
+  section#newsletter.text-center.p-5.bg-dark.text-white
+    .container
+      .row
+        .col
+          h1 Sign For Our Newsletter
+          form.form-inline.justify-content-center
+            input.form-control.mb-2.mr-2(type='text', placeholder='Eneter Name')
+            input.form-control.mb-2.mr-2(type='email', placeholder='Eneter Email')
+            button.btn.btn-primary.mb-2 Subscribe
+
+  // VIDEO MODAL
+  #videoModal.modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-body
+          button.close(data-dismiss='modal')
+            span ×
+          iframe(src='', frameborder='0', height='350', width='100%', allowfullscreen='')
+  // 
